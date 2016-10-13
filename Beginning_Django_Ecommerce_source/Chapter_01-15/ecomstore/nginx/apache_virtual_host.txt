@@ -1,0 +1,24 @@
+NameVirtualHost 127.0.0.1:8080
+
+<VirtualHost 127.0.0.1:8080>
+        ServerAdmin webmaster@localhost
+
+        ServerName www.your-domain.com
+        ServerAlias your-domain.com
+
+        DocumentRoot /path/to/project
+        WSGIScriptAlias / /path/to/project/apache/django.wsgi
+
+        ErrorLog /var/log/apache2/error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+
+        RPAFenable On
+        RPAFsethostname On
+        RPAFproxy_ips 127.0.0.1
+</VirtualHost>
+

@@ -1,0 +1,27 @@
+{% load catalog_filters %}
+
+<tr>
+	<td>
+		<a href="{{ item.get_absolute_url }}" class="cart">
+			{{ item.name }}
+		</a>
+	</td>
+	<td>{{ item.price|currency }}</td>
+	<td class="right">
+		<form method="post" action="." class="cart">
+			<label for="quantity">Quantity:</label>
+			<input type="text" name="quantity" value="{{ item.quantity }}" id="quantity" size="2" class="quantity" maxlength="5" />
+			<input type="hidden" name="item_id" value="{{ item.id }}" />
+	</td>
+	<td>
+		<input type="submit" name="submit" value="Update" />
+		</form>
+	</td>
+	<td>
+		<form method="post" action="." class="cart">
+			<input type="hidden" name="item_id" value="{{ item.id }}" />
+			<input type="submit" name="submit" value="Remove"/>
+		</form>
+	</td>
+	<td class="right">{{ item.total|currency }}</td>
+</tr>

@@ -1,0 +1,1 @@
+This app is intended to be integrated with the Django web framework (http://www.djangoproject.com/) and the App Engine Patch (http://code.google.com/p/app-engine-patch/) in order to run on Google App Engine.

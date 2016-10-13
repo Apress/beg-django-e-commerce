@@ -1,0 +1,15 @@
+{% if p.has_other_pages %}
+	{% if p.has_previous %}
+		<a href="{{ request.path }}?{{ params }}&page={{ p.previous_page_number }}">&laquo; Previous</a>
+	{% else %}
+		&laquo; Previous
+	{% endif %}
+	
+	| Page {{ p.number }} of {{ paginator.num_pages }} | 
+	
+	{% if p.has_next %}
+		<a href="{{ request.path }}?{{ params }}&page={{ p.next_page_number }}">Next &raquo;</a>
+	{% else %}
+		Next &raquo;
+	{% endif %}
+{% endif %}

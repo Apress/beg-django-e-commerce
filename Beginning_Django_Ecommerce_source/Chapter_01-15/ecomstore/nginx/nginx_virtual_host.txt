@@ -1,0 +1,37 @@
+server {
+  listen 80;
+  server_name www.your-domain.com your-domain.com;
+    location / {
+      access_log /var/log/nginx/localhost.access.log;
+      proxy_pass http://127.0.0.1:8080;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /static {
+        root /path/to/project;
+    }
+}
+
+
+server {
+  listen 443;
+  ssl   on;
+  ssl_certificate       /etc/ssl/certs/ecomstore.crt;
+  ssl_certificate_key   /etc/ssl/private/ecomstore.key;
+  server_name www.your-domain.com your-domain.com;
+    location / {
+      access_log /var/log/nginx/localhost.access.log;
+      proxy_pass http://127.0.0.1:8080;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Ssl on;
+    }
+
+    location /static {
+        root /path/to/project;
+    }
+}
+

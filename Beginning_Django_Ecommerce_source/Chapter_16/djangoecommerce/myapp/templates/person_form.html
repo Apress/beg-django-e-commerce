@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Create person{% endblock %}
+
+{% block content %}
+<h1>Create person</h1>
+<a href="{% url myapp.views.list_people %}">Back to listing</a>
+
+<form action="" method="post" enctype="multipart/form-data">
+  <table>
+    {{ form.as_table }}
+    <tr><td colspan="2">
+      <input type="submit"
+        value="{% if object %}Apply changes{% else %}Create{% endif %}" />
+    </td></tr>
+  </table>
+</form>
+{% endblock %}

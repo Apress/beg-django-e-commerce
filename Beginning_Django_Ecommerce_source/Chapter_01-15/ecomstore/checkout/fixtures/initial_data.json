@@ -1,0 +1,40 @@
+[ 
+  {
+    "pk": 17, 
+    "model": "checkout.order", 
+    "fields": {
+      "last_updated": "2009-05-25 15:23:41", 
+      "billing_name": "Alice", 
+      "billing_country": "United States", 
+      "email": "modernguitarhero@gmail.com", 
+      "transaction_id": "0000000000", 
+      "status": 1, 
+      "shipping_name": "Alice", 
+      "shipping_city": "Beach Town", 
+      "billing_address_1": "12345 Google Way", 
+      "billing_address_2": "", 
+      "user": 12, 
+      "shipping_state": "CA", 
+      "date": "2009-05-25 15:23:41", 
+      "ip_address": "127.0.0.1", 
+      "shipping_address_1": "12345 Google Way", 
+      "shipping_address_2": "", 
+      "billing_city": "Beach Town", 
+      "shipping_zip": "92345", 
+      "phone": "333-444-5555", 
+      "billing_zip": "92345", 
+      "shipping_country": "United States", 
+      "billing_state": "CA"
+    }
+  },  
+  {
+    "pk": 14, 
+    "model": "checkout.orderitem", 
+    "fields": {
+      "product": 1, 
+      "order": 17, 
+      "price": "249.99", 
+      "quantity": 1
+    }
+  }
+]

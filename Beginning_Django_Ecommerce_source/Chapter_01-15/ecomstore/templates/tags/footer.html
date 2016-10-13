@@ -1,0 +1,12 @@
+{% load cache %}
+
+{% cache 3600 footer_links %}
+<a href="{% url catalog_home %}">Home</a>
+	{% with flatpage_list as pages %}
+		{% for page in pages %}
+			<a href="{{ page.url }}">{{ page.title }}</a>
+		{% endfor %}
+	{% endwith %}
+{% endcache %}
+<a href="{% url show_cart %}">Shopping Cart</a>
+<a href="{% url tag_cloud %}">Tag Cloud</a>

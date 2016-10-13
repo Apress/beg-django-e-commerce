@@ -1,0 +1,23 @@
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+
+        ServerName www.your-domain.com
+        ServerAlias your-domain.com
+
+        # assumes a directory called 'static' in the root of your project
+        Alias /static /path/to/project/static
+
+        DocumentRoot /path/to/project
+        WSGIScriptAlias / /path/to/project/apache/django.wsgi
+
+        ErrorLog /var/log/apache2/error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+</VirtualHost>
+

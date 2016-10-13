@@ -1,0 +1,16 @@
+var isOpera=(navigator.userAgent.indexOf("Opera")>=0)&&parseFloat(navigator.appVersion);var isIE=((document.all)&&(!isOpera))&&parseFloat(navigator.appVersion.split("MSIE ")[1].split(";")[0]);function addEvent(d,a,b){if(d.addEventListener){d.addEventListener(a,b,false);return true}else{if(d.attachEvent){var c=d.attachEvent("on"+a,b);return c}else{return false}}}function removeEvent(c,a,b){if(c.removeEventListener){c.removeEventListener(a,b,false);return true}else{if(c.detachEvent){c.detachEvent("on"+a,b);return true}else{return false}}}function quickElement(){var c=document.createElement(arguments[0]);if(arguments[2]!=""&&arguments[2]!=null){var d=document.createTextNode(arguments[2]);c.appendChild(d)}var a=arguments.length;for(var b=3;b<a;b+=2){c.setAttribute(arguments[b],arguments[b+1])}arguments[1].appendChild(c);return c}var xmlhttp;
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+    try {
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+    }
+@else
+    xmlhttp = false;
+@end @*/
+if(!xmlhttp&&typeof XMLHttpRequest!="undefined"){xmlhttp=new XMLHttpRequest()}function findPosX(a){var b=0;if(a.offsetParent){while(a.offsetParent){b+=a.offsetLeft-((isOpera)?0:a.scrollLeft);a=a.offsetParent}if(isIE&&a.parentElement){b+=a.offsetLeft-a.scrollLeft}}else{if(a.x){b+=a.x}}return b}function findPosY(b){var a=0;if(b.offsetParent){while(b.offsetParent){a+=b.offsetTop-((isOpera)?0:b.scrollTop);b=b.offsetParent}if(isIE&&b.parentElement){a+=b.offsetTop-b.scrollTop}}else{if(b.y){a+=b.y}}return a}Date.prototype.getCorrectYear=function(){var a=this.getYear()%100;return(a<38)?a+2000:a+1900};Date.prototype.getTwoDigitMonth=function(){return(this.getMonth()<9)?"0"+(this.getMonth()+1):(this.getMonth()+1)};Date.prototype.getTwoDigitDate=function(){return(this.getDate()<10)?"0"+this.getDate():this.getDate()};Date.prototype.getTwoDigitHour=function(){return(this.getHours()<10)?"0"+this.getHours():this.getHours()};Date.prototype.getTwoDigitMinute=function(){return(this.getMinutes()<10)?"0"+this.getMinutes():this.getMinutes()};Date.prototype.getTwoDigitSecond=function(){return(this.getSeconds()<10)?"0"+this.getSeconds():this.getSeconds()};Date.prototype.getISODate=function(){return this.getCorrectYear()+"-"+this.getTwoDigitMonth()+"-"+this.getTwoDigitDate()};Date.prototype.getHourMinute=function(){return this.getTwoDigitHour()+":"+this.getTwoDigitMinute()};Date.prototype.getHourMinuteSecond=function(){return this.getTwoDigitHour()+":"+this.getTwoDigitMinute()+":"+this.getTwoDigitSecond()};String.prototype.pad_left=function(d,c){var b=this;for(var a=0;b.length<d;a++){b=c+b}return b};function getStyle(b,a){var c="";if(document.defaultView&&document.defaultView.getComputedStyle){c=document.defaultView.getComputedStyle(b,"").getPropertyValue(a)}else{if(b.currentStyle){a=a.replace(/\-(\w)/g,function(d,e){return e.toUpperCase()});c=b.currentStyle[a]}}return c};

@@ -1,0 +1,16 @@
+{% extends "catalog.html" %}
+
+{% block content %}    
+    <h1>{{ product.name }}</h1>
+    <br />
+    Price: ${{ product.price }}
+    <br />
+    Description: {{ product.description }}
+    <br /><br />
+    <form action="." method="post"> 
+        {{ form }}
+        <br />
+        <input type="submit" value="Add To Cart" />
+    </form>
+<br />
+{% endblock %}

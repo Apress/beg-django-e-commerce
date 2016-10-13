@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load store_tags %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block site_wrapper %}
+<div id="main">
+     <div id="middle">
+          <div id="banner">
+            <h1>
+              <a href="/">
+                Bleeker Street Coffee
+              </a>
+            </h1>
+            <div id="navigation">
+                <a href="/">Home</a> | 
+                <a href="/cart/">Cart</a>
+            </div>
+          </div>
+          <div id="sidebar">
+            {% category_list %}
+            <br /><br />
+            <a href="http://code.google.com/p/app-engine-patch/">
+            <img src="{{ MEDIA_URL }}global/powered-by-app-engine-patch.png" alt="powered by app-engine-patch" />
+            </a>
+
+          </div>
+          <div id="content">
+             <div style="padding:10px;padding-left:30px;">
+                {% block content %}{% endblock %}
+             </div>
+          </div>
+     </div>
+</div>
+{% endblock %}

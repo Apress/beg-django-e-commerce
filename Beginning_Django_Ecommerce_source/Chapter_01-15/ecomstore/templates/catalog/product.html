@@ -1,0 +1,107 @@
+{% extends "catalog.html" %}
+
+{% load catalog_filters %}
+
+{% block content %}
+<div xmlns:v="http://rdf.data-vocabulary.org/#" about="{{ p.get_absolute_url }}" typeof="v:Product">
+	<div class="product_image" >
+		<img src="{{ p.image.url }}" alt="{{ p.name }}" />
+		<br />
+		{{ p.image_caption }}
+	</div>
+	<h1><span property="v:name">{{ p.name }}</span></h1>
+	Brand: <em><span property="v:brand">{{ p.brand }}<span></em>
+	<br /><br />
+	SKU: {{ p.sku }}
+	<br />
+	In categor{{ categories.count|pluralize:"y,ies" }}: 
+	{% for c in categories %}
+		<a href="{{ c.get_absolute_url }}">
+		<span property="v:category">
+		{{ c.name }}
+		</span>
+		</a>
+		{% if not forloop.last %}, {% endif %}
+	{% endfor %}
+	<br /><br />
+	{% if p.sale_price %}
+		Was: <del>{{ p.old_price|currency }}</del>
+		<br />
+		Now: <span property="v:price">{{ p.price|currency }}</span>
+	{% else %}
+		Price: <span property="v:price">{{ p.price|currency }}</span>
+	{% endif %}
+	<br /><br />
+	<form method="post" action="." class="cart">
+		{{ form.as_p }}
+		<br />
+		<input type="submit" value="Add To Cart" name="submit" alt="Add To Cart" />
+	</form>
+	<div class="cb"><br /><br /></div>
+	<h3>Related Products</h3>
+		{% for p in p.cross_sells_hybrid %}
+			{% include 'tags/product_thumbnail.html' %}
+		{% empty %}
+			No related products.
+		{% endfor %}
+	<div class="cb"><br /><br /></div>
+	<h3>Product Description</h3>
+	<span property="v:description">{{ p.description }}</span>
+	
+</div>
+
+
+	<div class="cb"><br /><br /></div>
+	<h3>Product Tags</h3>
+	 	
+	 	<div id="tags">
+	 		{% for tag in p.tags %}
+	 			{% include 'catalog/tag_link.html' %}
+	 		{% endfor %}
+	 	</div>
+	 	<br />
+	 	{% if request.user.is_authenticated %}
+	 		<label for="id_tag">Tag this product (must be at least three characters):</label>
+	 		<br />
+	 		<input id="id_tag" type="text" />
+	 		<input type="submit" value="Tag It" id="add_tag" />
+	 		
+	 	{% else %}
+	 		<a href="{% url login %}?next={{ request.path }}">
+				Log in to tag this product.
+			</a>
+	 	{% endif %}
+	<div class="cb"><br /><br /></div>
+	<h3>Product Reviews</h3>
+		{% if request.user.is_authenticated %}
+		<a id="add_review">Write a Review</a>
+	<div id="review_form">
+		<div id="review_errors"></div>
+		<table>
+		{{ review_form.as_table }}
+		<tr><td colspan="2">
+			<input type="hidden" id="id_slug" value="{{ p.slug }}" />
+			<input type="submit" id="submit_review" value="Submit" />
+			<input type="submit" id="cancel_review" value="Cancel" />
+		</td></tr>
+		</table>
+	</div>
+		{% else %}
+			<a href="{% url login %}?next={{ request.path }}">
+				Log in to write your own review.
+			</a>
+		{% endif %}
+		
+	<div class="cb"><br /><br /></div>
+	
+	<div id="reviews">
+		{% for review in product_reviews %}
+			{% include 'catalog/product_review.html' %}
+		{% empty %}
+			<div id="no_reviews">
+				No product reviews yet.
+			</div>
+		{% endfor %}
+	</div>
+	<div class="cb"><br /><br /></div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<tr>
+	<th>
+	{% if form_field.field.required %}*{% endif %}
+	{{ form_field.label_tag }}
+	</th>
+	<td>
+	{% if form_field.errors %}
+		<ul class="errorlist">
+		{% for error in form_field.errors %}
+			<li>{{ form_field.label }}: {{ error }}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+			
+	{{ form_field }}
+	</td>
+</tr>

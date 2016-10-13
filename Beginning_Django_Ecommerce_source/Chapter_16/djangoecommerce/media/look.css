@@ -1,0 +1,86 @@
+/* Add your global CSS (i.e., code that is project-specific and not part of any app) here. */
+
+*{padding:0;margin:0;}
+body{font-family:Verdana;font-size:0.9em;}
+.bn{border:none;border:0;}
+.fl{float:left;}.fr{float:right;}
+.cb{clear:both;}
+
+div#main{
+    width:100%;
+}
+div#middle{
+    width:900px;
+    margin: 0 auto;
+}
+div#banner{
+    height:100px;
+    background-color:green;
+    position:relative;
+}
+
+div#banner h1{
+    padding-top:25px;
+    padding-left:10px;
+}
+
+div#banner h1 a{
+    color:White;
+    text-decoration:none;
+    font-size:2em;
+}
+
+div#navigation{
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:5px;
+}
+
+div#navigation a{
+    color:yellow;
+    font-weight:bold;
+}
+
+div#sidebar{
+   float:left;
+   width:200px;
+   padding-top:10px;
+   text-align:left;
+}
+
+h3{
+   background-color:Maroon;
+   color:White;
+   font-size:1.0em;
+   padding:3px;
+   font-weight:bold;
+}
+
+div#content{
+    float:left;
+    width:700px;
+    
+}
+
+h1, summary{
+   font-size:1.3em;
+   font-weight:bold;
+}
+
+ul#category_list{
+    list-style:None;
+    padding:0;
+    margin:0;
+    padding-left:5px;
+}
+
+ul#category_list li a{
+    color: Maroon;
+    text-decoration:None;
+    font-weight:bold;
+}
+
+ul#category_list li a:hover{
+    text-decoration:underline;
+}

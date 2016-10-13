@@ -1,0 +1,56 @@
+{% extends "catalog.html" %}
+
+{% load checkout_tags %}
+
+{% block content %}
+<h1>Edit Order Information</h1>
+{{ response }}
+{% if error_message %}
+	<ul class="errorlist">
+		<li>{{ error_message }}</li>
+	</ul>
+{% endif %}
+<form action="." method="post">
+	<!-- fieldset class="checkout">
+		<legend>Contact Info</legend>
+		<table>
+		{% form_table_row form.email %}
+		{% form_table_row form.phone %}
+		</table>
+	</fieldset>
+	<fieldset class="checkout">
+		<legend>Shipping Info</legend>
+		<table>
+		{% form_table_row form.shipping_name %}
+		{% form_table_row form.shipping_address_1 %}
+		{% form_table_row form.shipping_address_2 %}
+		{% form_table_row form.shipping_city %}
+		{% form_table_row form.shipping_state %}
+		{% form_table_row form.shipping_zip %}
+		{% form_table_row form.shipping_country %}
+		</table>
+	</fieldset>
+	<fieldset class="checkout">
+		<legend>Billing Info</legend>
+		<table>
+		{% form_table_row form.billing_name %}
+		{% form_table_row form.billing_address_1 %}
+		{% form_table_row form.billing_address_2 %}
+		{% form_table_row form.billing_city %}
+		{% form_table_row form.billing_state %}
+		{% form_table_row form.billing_zip %}
+		{% form_table_row form.billing_country %}
+		</table>
+	</fieldset -->
+	<table>
+		{{ form.as_table }}
+	</table>
+	<table>
+	<tr>
+		<th colspan="2">
+			<input type="submit" value="Save Information" class="submit" />
+		</th>
+	</tr>
+	</table>
+</form>
+{% endblock %}

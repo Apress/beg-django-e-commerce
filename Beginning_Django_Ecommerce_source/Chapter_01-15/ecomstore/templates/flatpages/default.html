@@ -1,0 +1,10 @@
+{% extends "catalog.html" %}
+
+{% block title %}
+	{{ flatpage.title }} - {{ site_name }}
+{% endblock %}
+
+{% block content %}
+	<h1>{{ flatpage.title }}</h1>
+    {{ flatpage.content }}
+{% endblock %}

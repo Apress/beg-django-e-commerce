@@ -1,0 +1,21 @@
+{% extends 'catalog.html' %}
+
+{% block content %}
+    <h1>Add Card</h1>
+    <form method="post" action="{{ request.path }}">
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit" />
+    </form>
+    <br /><br />
+    Original Post Data: {{ post_data }}
+    <br /><br />
+    Data as JSON: {{ json_data }}
+    <br /><br />
+    Encrypted JSON: {{ encrypted_json }}
+    <br /><br />
+    Decrypted JSON: {{ decrypted_json }}
+    <br /><br />
+    Decrypted Python Dictionary: {{ decrypted_data }}
+{% endblock %}

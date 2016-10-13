@@ -1,0 +1,34 @@
+{% if order %}
+<!-- script type="text/javascript">
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+: "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-
+analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script-->
+<script type="text/javascript">
+   var pageTracker = _gat._getTracker("{{ analytics_tracking_id }}");
+   pageTracker._initData();
+   pageTracker._trackPageview();
+   pageTracker._addTrans(
+      '{{ order.id }}',            // order ID - required
+      '',                          // affiliation or store name
+      '{{ order.total }}',         // total - required
+      '',                     		// tax
+      '',                          // shipping
+      '{{ order.shipping_city }}',  // city
+      '{{ order.shipping_state }}', // state or province
+      '{{ order.shipping_country }}'// country
+   );
+{% for item in order_items %}
+   pageTracker._addItem(
+      '{{ order.id }}',             // order ID - required
+      '{{ item.sku }}',             // SKU code (stock keeping unit)
+      '{{ item.name }}', 			// product name
+      '',       					// category or variation
+      '{{ item.price }}',           // unit price - required
+      '{{ item.quantity }}'        // quantity - required
+   );
+{% endfor %}
+   pageTracker._trackTrans();
+</script>
+{% endif %}

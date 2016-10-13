@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Person details{% endblock %}
+
+{% block content %}
+<h1>Person details</h1>
+<a href="{% url myapp.views.list_people %}">Back to listing</a>
+<a href="{% url myapp.views.edit_person key=object.key %}">Edit</a>
+<a href="{% url myapp.views.delete_person key=object.key %}">Delete</a>
+
+<ul>
+  <li>First name: {{ object.first_name }}</li>
+  <li>Last name: {{ object.last_name }}</li>
+  <li>Files: {% if object.file_set %}<ul>{% for file in object.file_set %}<li><a href="{{ file.get_absolute_url }}">{{ file.name }}</a></li>{% endfor %}</ul>{% endif %}</li>
+  <li>Employers: {% if object.employer_contract_set %}<ul>{% for contract in object.employer_contract_set %}<li>{{ contract.employer.first_name }} {{ contract.employer.last_name }}</li>{% endfor %}</ul>{% endif %}</li>
+  <li>Employees: {% if object.employee_contract_set %}<ul>{% for contract in object.employee_contract_set %}<li>{{ contract.employee.first_name }} {{ contract.employee.last_name }}</li>{% endfor %}</ul>{% endif %}</li>
+</ul>
+{% endblock %}

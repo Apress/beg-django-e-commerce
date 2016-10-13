@@ -1,0 +1,8 @@
+{% extends "catalog.html" %}
+
+{% block content %}
+	<h1>Products tagged with: '{{ tag }}'</h1>
+	{% for p in products %}
+		{% include 'tags/product_thumbnail.html' %}
+	{% endfor %}
+{% endblock %}

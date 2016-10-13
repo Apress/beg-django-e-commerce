@@ -1,0 +1,58 @@
+{% extends "catalog.html" %}
+
+{% load catalog_filters %}
+
+{% block content %}
+	<table summary="Your Shopping Cart" id="shopping_cart">
+		<caption>Your Shopping Cart</caption>
+		<thead>
+			<tr>
+				<th scope="col">Product</th>
+				<th scope="col">Price</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th scope="col" class="right">Total</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="right" colspan="5">
+					Cart Subtotal:
+				</th>
+				<th class="right">
+					{{ cart_subtotal|currency }}
+				</th>
+			</tr>
+			{% if cart_items %}
+			<tr>
+				<th class="right" colspan="6">
+					<form method="POST" action=".">
+    					<input type="hidden" name="submit" value="Checkout" />
+    					<!-- input type="image" name="Google Checkout" alt="Fast checkout through Google"
+        src="http://sandbox.google.com/checkout/buttons/checkout.gif?merchant_id={{ merchant_id }}
+              &w=180&h=46&style=white&variant=text&loc=en_US"  height="46" width="180" /-->
+              
+              		<input type="submit" value="Checkout" alt="Checkout" />
+    				</form>
+				</th>
+			</tr>
+			{% endif %}
+		</tfoot>
+		<tbody id="cart_body">
+		{% if cart_items %}
+			{% for item in cart_items %}
+				{% include 'cart/cart_item.html' %}
+			{% endfor %}
+		{% else %}
+		      <tr>
+					<td colspan="6" style="height:30px;">
+						Your cart is empty.
+					</td>
+				</tr>
+		{% endif %}
+		</tbody>
+	</table>
+	<br /><br />
+	{{ google_checkout_xml }}
+{% endblock %}

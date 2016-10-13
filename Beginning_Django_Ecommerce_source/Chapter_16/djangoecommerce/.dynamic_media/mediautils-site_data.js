@@ -1,0 +1,1 @@
+window.site_data = {};window.site_data.settings = {"MEDIA_URL": "/media/1/"};

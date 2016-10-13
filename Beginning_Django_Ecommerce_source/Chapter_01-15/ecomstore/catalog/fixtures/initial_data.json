@@ -1,0 +1,259 @@
+[
+  {
+    "pk": 3, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "Modern Musician carries a wide selection of music accessories and other gear to help musicians make practice time efficient and fun", 
+      "meta_keywords": "accessories, music accessories, music gear, metronomes, ", 
+      "description": "Modern Musician carries a wide selection of music accessories and other gear to help musicians make practice time efficient and fun. Check out our metronomes, tuning forks, guitar picks, and software packages for the do-it-yourself home studio recorder.", 
+      "created_at": "2009-04-04 16:39:42", 
+      "is_active": 1, 
+      "updated_at": "2009-04-04 16:39:42", 
+      "slug": "accessories", 
+      "name": "Accessories"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "Wide variety of acoustic guitars and classical guitars, online in our guitar catalog", 
+      "meta_keywords": "guitar, classical guitar, acoustic guitar, nylon strings", 
+      "description": "Find the guitar you need to play anything from classic rock to flamenco in Modern Musician's wide selection of acoustic and classical acoustic guitars. Most models ship within two days!", 
+      "created_at": "2009-03-25 21:44:48", 
+      "is_active": 1, 
+      "updated_at": "2009-03-25 21:44:48", 
+      "slug": "acoustic-guitars", 
+      "name": "Acoustic Guitars"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "Browse a wide selection of electric guitars and find your own hammer of the gods.", 
+      "meta_keywords": "guitars, electric guitars, rock and roll, metal", 
+      "description": "The amp goes up to 11 on Modern Musician. FInd the axe of your dreams, ripe for rocking out or shredding to your favorite jams, in our online catalog. ", 
+      "created_at": "2009-03-25 21:49:24", 
+      "is_active": 1, 
+      "updated_at": "2009-04-23 18:41:54", 
+      "slug": "electric-guitars", 
+      "name": "Electric Guitars"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "Pianos on Modern Musician", 
+      "meta_keywords": "piano, upright piano, player pianos, pianos", 
+      "description": "We got some great pianos!", 
+      "created_at": "2009-06-08 21:32:25", 
+      "is_active": 1, 
+      "updated_at": "2009-06-08 21:32:25", 
+      "slug": "pianos", 
+      "name": "Pianos"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "75391", 
+      "meta_description": "Fortran Upright bass", 
+      "is_featured": 0, 
+      "meta_keywords": "fortran, upright bass, bass, orchestra", 
+      "name": "Fortran Upright Bass", 
+      "is_active": 0, 
+      "brand": "Burns", 
+      "description": "Man this thing is old, but it's still relevant at times. Maybe it'll be needed when the Y2K38 bug comes up.", 
+      "old_price": "0.00", 
+      "updated_at": "2009-06-09 23:11:20", 
+      "slug": "fortran-upright-bass", 
+      "thumbnail": "images/products/thumbnails/fortran_upright_bass_t.jpg", 
+      "is_bestseller": 0, 
+      "image": "images/products/main/fortran_upright_bass.jpg", 
+      "image_caption": "Crazy old bass.", 
+      "created_at": "2009-06-09 23:11:20", 
+      "price": "749.99", 
+      "categories": [
+        1
+      ], 
+      "quantity": 6
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "45678", 
+      "meta_description": "Java Upright Piano", 
+      "is_featured": 1, 
+      "meta_keywords": "java, java piano, piano, upright piano", 
+      "name": "Java Piano", 
+      "is_active": 1, 
+      "brand": "JavaBeans", 
+      "description": "This big and bulky piano is a little outdated, but it still gets the job done.' ", 
+      "old_price": "1399.99", 
+      "updated_at": "2009-06-08 21:32:34", 
+      "slug": "java-piano", 
+      "thumbnail": "images/products/thumbnails/java_piano_t.jpg", 
+      "is_bestseller": 0, 
+      "image": "images/products/main/java_piano.jpg", 
+      "image_caption": "Pretty Good Piano (PGP)", 
+      "created_at": "2009-06-08 21:30:23", 
+      "price": "1299.99", 
+      "categories": [
+        4
+      ], 
+      "quantity": 6
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "15945", 
+      "meta_description": "Buy the Groovy Guitar on modern musician", 
+      "is_featured": 1, 
+      "meta_keywords": "guitar, electric guitar", 
+      "name": "Groovy-Guitar", 
+      "is_active": 1, 
+      "brand": "Grails", 
+      "description": "If you thought the Ruby Axe Guitar was good, wait till you try this one on for size. With a fresh up-and-coming style that still integrates with old legacy sound systems, this guitar is good for smaller and larger venues for a full, rich-bodied sound.", 
+      "old_price": "0.00", 
+      "updated_at": "2009-06-03 22:46:11", 
+      "slug": "groovy-guitar", 
+      "thumbnail": "images/products/thumbnails/Groovy-guitar-t__.jpg", 
+      "is_bestseller": 1, 
+      "image": "images/products/main/Groovy-guitar-m__.jpg", 
+      "image_caption": "Rockin' a little harder.", 
+      "created_at": "2009-06-01 18:55:26", 
+      "price": "349.99", 
+      "categories": [
+        2
+      ], 
+      "quantity": 5
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "78945", 
+      "meta_description": "Our Erlang metronome is a favorite among up-and-coming musicians who need full tempo power.", 
+      "is_featured": 1, 
+      "meta_keywords": "metronome, tempo, beat, musician", 
+      "name": "Erlang Multi-Core Metronome", 
+      "is_active": 1, 
+      "brand": "Erlang", 
+      "description": "GIve up the beat! Our Erlang metronome is a favorite among up-and-coming musicians who need full tempo power. Without this stellar little metronome, who knows where the Rolling Stones would be today?", 
+      "old_price": "59.99", 
+      "updated_at": "2009-06-03 22:45:48", 
+      "slug": "erlang-multi-core-metronome", 
+      "thumbnail": "images/products/thumbnails/78945_.jpg", 
+      "is_bestseller": 0, 
+      "image": "images/products/main/78945_.jpg", 
+      "image_caption": "Good metronome.", 
+      "created_at": "2009-04-04 16:45:52", 
+      "price": "49.99", 
+      "categories": [
+        3
+      ], 
+      "quantity": 6
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "15973", 
+      "meta_description": "Buy the classic ruby axe guitar online!", 
+      "is_featured": 1, 
+      "meta_keywords": "Electric guitar, ruby axe guitar", 
+      "name": "Ruby Axe Guitar", 
+      "is_active": 1, 
+      "brand": "Rails", 
+      "description": "The ruby axe guitar is a classic in the rock world. Used by the likes of Sting, Phil Collins, and just about every member of the band Chicago, this guitar will help you tear it up. If you thought you couldn't bring agile to stadium rock, wait till your fingers taste this fretboard.", 
+      "old_price": "299.99", 
+      "updated_at": "2009-06-27 23:05:05", 
+      "slug": "ruby-axe-electric-guitar", 
+      "thumbnail": "images/products/thumbnails/15973_.jpg", 
+      "is_bestseller": 0, 
+      "image": "images/products/main/15973_.jpg", 
+      "image_caption": "The Ruby Axe", 
+      "created_at": "2009-03-25 21:55:18", 
+      "price": "249.99", 
+      "categories": [
+        1, 
+        2
+      ], 
+      "quantity": 5
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "catalog.productreview", 
+    "fields": {
+      "rating": 5, 
+      "product": 2, 
+      "is_approved": 1, 
+      "title": "Great Metronome", 
+      "content": "Gotta say, this one surprised me. I bought it despite a few bad reviews and I was not disappointed! It ticks just as nicely as the crocodile that stalked Captain Hook.", 
+      "user": 12, 
+      "date": "2009-06-23 01:03:39"
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "catalog.productreview", 
+    "fields": {
+      "rating": 5, 
+      "product": 2, 
+      "is_approved": 1, 
+      "title": "asdfasdf", 
+      "content": "asdfsadf", 
+      "user": 12, 
+      "date": "2009-06-25 12:51:03"
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "catalog.productreview", 
+    "fields": {
+      "rating": 5, 
+      "product": 2, 
+      "is_approved": 1, 
+      "title": "asdfasdf", 
+      "content": "asdfsadf", 
+      "user": 12, 
+      "date": "2009-06-25 12:53:40"
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "catalog.productreview", 
+    "fields": {
+      "rating": 5, 
+      "product": 2, 
+      "is_approved": 1, 
+      "title": "asdfas", 
+      "content": "sdfasdf", 
+      "user": 12, 
+      "date": "2009-06-25 12:55:35"
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "catalog.productreview", 
+    "fields": {
+      "rating": 5, 
+      "product": 3, 
+      "is_approved": 1, 
+      "title": "qwereqwr", 
+      "content": "qwerqwer", 
+      "user": 12, 
+      "date": "2009-06-25 13:03:54"
+    }
+  }
+]

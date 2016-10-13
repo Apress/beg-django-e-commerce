@@ -1,0 +1,8 @@
+This project is an e-commerce shopping cart site built using the App Engine Patch for Django in order to run on Google's App Engine cloud infrastructure.
+
+The App Engine Patch is released under an MIT License (see the common/appenginepatch subdirectory for details); some parts were borrowed from the App Engine Helper project, which was distributed using the Apache 2 license.
+
+The 'store' and 'brubeck' apps in this project are available for use under the terms of the MIT License.
+
+For more, please go to:
+http://code.google.com/p/app-engine-patch/

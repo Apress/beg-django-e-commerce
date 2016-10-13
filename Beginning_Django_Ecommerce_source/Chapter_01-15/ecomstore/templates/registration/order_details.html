@@ -1,0 +1,40 @@
+{% extends "catalog.html" %}
+
+{% load catalog_filters %}
+
+{% block content %}
+	<table id="receipt">
+		<caption>
+			Details for Order # {{ order.id }}
+		</caption>
+		<thead>
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Price</th>
+			<th scope="col">Quantity</th>
+			<th class="right" scope="col">Total</th>
+		</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="4" class="right" style="height:30px;">
+				Order Total: {{ order.total|currency }}
+				</td>
+			</tr>
+		</tfoot>
+		<tbody>
+		{% for item in order_items %}
+		<tr>
+			<td>
+				<a href="{{ item.get_absolute_url }}">
+					{{ item.name }}
+				</a>
+			</td>
+			<td>{{ item.price|currency }}</td>
+			<td>{{ item.quantity }}</td>
+			<td class="right">{{ item.total|currency }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

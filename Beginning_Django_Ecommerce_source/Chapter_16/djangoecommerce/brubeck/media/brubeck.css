@@ -1,0 +1,7 @@
+table#shopping_cart th{
+    background-color:Maroon;
+    color:White;
+}
+table#shopping_cart td{
+    height:30px;
+}

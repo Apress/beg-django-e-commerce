@@ -1,0 +1,60 @@
+{% extends "catalog.html" %}
+
+{% block content %}
+    <table width="100%" id="shopping_cart">
+        <summary>Shopping Cart</summary>
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th></th>
+            <th></th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="6" style="text-align:right;">
+                    Cart Subtotal: ${{ shopping_cart.subtotal }}
+                <br /><br />
+                <input type="submit" value="Checkout" />
+            </td>
+        </tr>
+        </tfoot>
+    {% if shopping_cart.items %}
+        {% for item in shopping_cart.items %}
+        <tr>
+            <td width="300px">
+            <a href="{{ item.get_absolute_url }}">
+                {{ item.name }}
+            </a>
+            </td>
+            <td>
+                <form action="." method="post">
+                <input type="text" name="quantity" value="{{ item.quantity }}" size="2" />
+                <input type="hidden" name="cart_item_id" value="{{ item.id }}" />
+            </td>
+            <td>
+                <input type="submit" name="submit" value="Update" />
+                </form>
+            </td>
+            <td>
+                <form action="." method="post">
+                    <input type="hidden" name="cart_item_id" value="{{ item.id }}" />
+                    <input type="submit" name="submit" value="Remove" />
+                </form>
+            </td>
+            <td>${{ item.price }}</td>
+            <td>${{ item.total }}</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="6">
+                Your cart is empty.
+            </td>
+        </tr>
+    {% endif %}
+    </table>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load catalog_tags %}
+{% load search_tags %}
+
+{% block site_wrapper %}
+	<div id="main">
+	<a href="#content" class="skip_link">Skip to main content</a>
+		<noscript>
+        	<div id="noscript">Some parts of {{ site_name }} require Javascript</div>
+        	<div id="noscript_padder"></div>
+    	</noscript>
+		<div id="banner">
+			<div class="bannerIEPadder">
+			     <div class="cart_box">
+			         {% cart_box request %}
+			     </div>
+				{{ site_name }}
+			</div>
+		</div>
+		<div id="navigation">
+			<div class="navIEPadder">
+			{% include 'tags/navigation.html' %}
+			</div>
+		</div>
+		<div id="middle">
+			<div id="sidebar">
+				<div class="sidebarIEPadder">
+					{% search_box request %}
+					<br /><br />
+					{% category_list request.path %}
+					<br /><br />
+				</div>
+			</div>
+			<div id="content">
+			<a name="content"></a>
+				<div class="contentIEPadder">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footerIEPadder">
+				{% footer_links %}
+				<div class="cb"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

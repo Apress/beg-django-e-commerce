@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Person listing{% endblock %}
+
+{% block content %}
+<h1>Person listing</h1>
+<a href="{% url myapp.views.add_person %}">Create person</a>
+
+<ul>
+  {% for person in object_list %}
+    <li>
+      <a href="{% url myapp.views.show_person key=person.key %}">{{ person.first_name }} {{ person.last_name }}</a>
+      <a href="{% url myapp.views.edit_person key=person.key %}">Edit</a>
+      <a href="{% url myapp.views.delete_person key=person.key %}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<div>
+  {% if has_previous %}
+    <a href="{% url myapp.views.list_people %}?page={{ previous }}">&lt;-previous</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url myapp.views.list_people %}?page={{ next }}">next-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

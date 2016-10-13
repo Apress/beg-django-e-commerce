@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="Stylesheet" type="text/css" href="{{ MEDIA_URL }}css.css" />
+	<link rel="SHORTCUT ICON" href="{{ MEDIA_URL }}images/favicon.ico" />
+	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
+	<meta name="keywords" content="{{ meta_keywords }}" />
+	<meta name="description" content="{{ meta_description }}" />
+	<meta name="verify-v1" content="bPjaC6MIttNNSgZfZXROVZ4RPbKJkyv7rAM2sOuUWk0=" />	
+</head>
+<body>
+	{% block site_wrapper %}{% endblock %}
+	<script type="text/javascript" src="{{ MEDIA_URL }}jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}scripts.js"></script>
+	{% include 'marketing/google_analytics.html' %}
+	{% block receipt_analytics %}{% endblock %}
+</body>
+</html>

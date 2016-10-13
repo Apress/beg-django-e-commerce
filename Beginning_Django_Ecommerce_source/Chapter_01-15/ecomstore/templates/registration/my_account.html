@@ -1,0 +1,25 @@
+{% extends "catalog.html" %}
+
+{% block content %}
+<h1>My Account</h1>
+<strong>Welcome, {{ name|capfirst }}!</strong>
+<br /><br />
+<fieldset class="my_account">
+	<legend>Order History</legend>
+	{% for order in orders %}
+		<a href="{{ order.get_absolute_url }}">
+		Order #{{ order.id }} - {{ order.date|date }}  (view)
+		</a><br />
+	{% empty %}
+		You have no past orders.
+	{% endfor %}
+</fieldset>
+<br />
+<fieldset class="my_account">
+	<legend>Account Settings</legend>
+	<ul>
+	<li><a href="{% url django.contrib.auth.views.password_change %}">Change Password</a></li>
+	<li><a href="{% url order_info %}">Edit Billing/Shipping Information</a></li>
+	</ul>
+</fieldset>
+{% endblock %}

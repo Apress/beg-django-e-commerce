@@ -1,0 +1,7 @@
+Hi!
+In order to activate your account please visit the following link:
+
+http://{{ site }}{% url registration_activate activation_key=activation_key %}
+
+Thanks,
+Your {{ site }} team

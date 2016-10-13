@@ -1,0 +1,6 @@
+*.swp
+*.pyc
+settings_local.py
+.pydevproject
+.project
+src/

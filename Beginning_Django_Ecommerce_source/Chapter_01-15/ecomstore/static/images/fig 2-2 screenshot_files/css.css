@@ -1,0 +1,259 @@
+﻿*{margin:0;padding:0;}
+html{font-size:medium;}
+html,body{background-color:Silver;}
+.cb{clear:both;}
+.fr{float:right;}
+.fl{float:left;}
+.bn{border:none;}
+
+#main{
+	margin: 0 auto;
+	width:900px;
+	background-color:White;
+}
+.bannerIEPadder, .sidebarIEPadder, .contentIEPadder{
+	padding:10px;	
+}
+.navIEPadder{
+	padding:5px;
+}
+#banner{
+	width:900px;height:75px;
+	background-color:DarkOrange;
+	color:White;
+	font-size:36px;
+	font-weight:bold;
+	position:relative;
+}
+div.cart_box{
+	position:absolute;
+	top:10px;
+	right:10px;
+	font-size:medium;
+}
+div.cart_box a{
+	color:white;
+}
+#navigation{
+	width:900px;
+	height:auto;
+	background-color:#98AC5E;
+	text-align:middle;
+}
+#navigation ul{
+	list-style:none;	
+}
+#navigation ul li{
+	float:left;
+	margin-right:15px;
+}
+#navigation ul li a{
+	color:White;
+	font-weight:bold;
+	text-decoration:underline;
+}
+#navigation ul li a:hover{
+	color:#616161;
+	background-color:White;
+	text-decoration:none;
+}
+#sidebar{
+	width:200px;
+	float:left;;
+}
+#content{
+	width:700px;
+	float:left;
+}
+#footer{
+	clear:both;
+	background-color:#98AC5E;
+	color:White;
+	text-align:center;
+}
+a.skip_link{
+	position:absolute;
+	left:-1000px;
+	top:-1000px;
+}
+
+/* start of chapter 3 added styles */
+a{
+	color:#98AC5E;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+/* category page styles */
+div.product_thumbnail{
+	text-align:center;
+	float:left;
+	width:150px;
+	height:200px;
+}
+
+/* product page styles */
+div.product_image{
+	float:left;
+	padding:0 10px 10px 0;
+}
+
+/* chapter 4 added styles */
+ul.errorlist{
+	background-color:Red;
+	color:White;
+	padding:2px;
+}
+
+/* styles for shopping cart page */
+table#shopping_cart{
+	width:100%;
+	border-collapse:collapse;
+	color:#616161;
+}
+h1,caption{
+	text-align:left;
+	font-size:x-large; 
+	margin-bottom:15px;
+	color:Black;
+}
+th,td{
+	text-align:left;
+	padding:3px;
+}
+thead th{
+	color:White;
+	background-color:#616161;
+}
+tfoot th{
+	height:40px;
+}
+
+table#shopping_cart th.right, td.right{
+	text-align:right;
+}
+a.cart{
+	color:DarkOrange;
+}
+h3{
+	background-color:#98AC5E;
+	color:White;
+	padding:3px;
+	margin-bottom:6px;
+}
+
+ul#categories{
+	list-style:none;
+}
+ul#categories li{
+	font-weight:bold;
+	color:#616161;	
+}
+ul#categories li a{
+	text-decoration:underline;
+}
+
+div#footer a{
+	color:White;
+	font-size:small;
+	text-decoration:underline;	
+	font-weight:normal;
+	margin-right:10px;
+}
+
+/* checkout styles CH05 */
+fieldset.checkout{
+	padding-bottom:15px;
+	margin-bottom:15px;	
+}
+
+fieldset.checkout legend{ 
+	font-weight:bold;
+	color:Black;
+	margin-left:15px;
+}
+
+fieldset.checkout table{
+	border-collapse:collapse;
+	width:100%;
+}
+
+fieldset.checkout table th{
+	text-align:right;
+	width:200px;
+	font-weight:normal;
+}
+
+fieldset.checkout input {
+	font-family:Courier;
+	font-size:Large;	
+}
+
+table#receipt{
+	width:100%;
+	border-collapse:collapse;
+}
+
+/* user login / register styles CH06 */
+table#register{
+	width:100%;
+}
+table#register th, td{
+	vertical-align:top;
+}
+fieldset.my_account{
+	padding:10px;
+}
+fieldset.my_account legend{
+	font-weight:bold;
+}
+fieldset.my_account ul{
+	list-style:none;
+}
+fieldset.my_account ul li{
+	margin-bottom:5px;
+}
+
+#add_review{
+	cursor:pointer;	
+}
+.hidden{display:none;}
+.visible{display:block;}
+.new_review{background-color:Pink;}
+
+#tags a{
+	color:DarkOrange;
+}
+
+#loading{
+	display:none;
+	position:fixed;
+	top:0;
+	left:45%;
+	background-color:Pink;
+	width: 200px;
+	font-size:medium;
+	color:Black;
+	font-weight:bold;
+	padding:2px;
+	border:solid 1px Red; 
+	text-align: center;
+	z-index:100;	
+}
+
+#noscript{
+	position:fixed;
+	top:0;left:0;
+	width:100%;
+	background-color:Red;
+	color:White;
+	font-weight:bold;
+	padding:5px;
+	text-align:center;
+}
+#noscript_padder{
+	height:30px;
+}

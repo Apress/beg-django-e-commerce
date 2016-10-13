@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Delete person{% endblock %}
+
+{% block content %}
+<h1>Delete person</h1>
+<a href="{% url myapp.views.list_people %}">Back to listing</a>
+<a href="{% url myapp.views.show_person key=object.key %}">Back to person</a>
+
+<p>
+Do you really want to delete {{ object.first_name }} {{ object.last_name }}?
+
+<form action="" method="post">
+  <input type="submit" name="delete" value="Delete" />
+</form>
+</p>
+
+{% endblock %}

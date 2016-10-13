@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+<form action="{{ request.get_full_path }}" method="post">
+  <table>{{ form }}</table>
+  <input type="submit" value="Login" />
+</form>
+{% endblock content %}

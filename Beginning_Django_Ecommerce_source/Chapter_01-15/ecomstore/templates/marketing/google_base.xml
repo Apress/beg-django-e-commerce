@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version ="2.0" xmlns:g="http://base.google.com/ns/1.0">
+
+<channel>
+	<title>Modern Musician Product Feed</title>
+	<description>Modern Musician is an online supplier of musical instruments, sheet music, and other musician accessories</description>
+	<link>http://www.django-ecommerce.com/</link>
+
+{% for p in products %}
+<item>
+<title>{{ p.name }}</title>
+
+<g:brand>{{ p.brand }}</g:brand>
+<g:condition>new</g:condition>
+<description>{{ p.description }}</description>
+<guid>{{ p.sku }}</guid>
+<g:image_link>{{ p.image.url }}</g:image_link>
+<link>{{ p.get_absolute_url }}</link>
+<g:mpn>ABC123</g:mpn>
+<g:price>{{ p.price }}</g:price>
+<g:product_type>{{ p.categories.all|join:", " }}</g:product_type>
+
+<g:quantity>{{ p.quantity }}</g:quantity>
+
+<g:shipping>
+   <g:country>US</g:country>
+   <g:service>Ground</g:service>
+   <g:price>9.99</g:price>
+</g:shipping>
+
+<g:tax>
+   <g:country>US</g:country>
+   <g:region>CA</g:region>
+   <g:rate>8.75</g:rate>
+   <g:tax_ship>y</g:tax_ship>
+</g:tax>
+
+</item>
+{% endfor %} 
+
+</channel>
+</rss>

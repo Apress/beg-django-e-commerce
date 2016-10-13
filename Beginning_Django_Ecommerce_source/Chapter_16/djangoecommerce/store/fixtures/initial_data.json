@@ -1,0 +1,144 @@
+[
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjMHww", 
+    "model": "store.category", 
+    "fields": {
+      "updated_at": "2009-08-03 02:14:38.837399", 
+      "created_at": "2009-08-01 14:50:47", 
+      "is_active": true, 
+      "name": "Tea", 
+      "description": "Feeling the need to mellow out? Check out our wide selection of herbal teas!"
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjNHww", 
+    "model": "store.category", 
+    "fields": {
+      "updated_at": "2009-08-03 02:14:39.234227", 
+      "created_at": "2009-08-01 14:49:48", 
+      "is_active": true, 
+      "name": "Coffee", 
+      "description": "Got the jitters? We got your fix here!"
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjOHww", 
+    "model": "store.category", 
+    "fields": {
+      "updated_at": "2009-08-03 02:14:39.615903", 
+      "created_at": "2009-08-01 16:00:40", 
+      "is_active": true, 
+      "name": "Teapots", 
+      "description": "This is how we brew it."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjPHww", 
+    "model": "store.category", 
+    "fields": {
+      "updated_at": "2009-08-03 02:14:40.069179", 
+      "created_at": "2009-08-01 23:02:43.038076", 
+      "is_active": true, 
+      "name": "Espresso Machines", 
+      "description": "Need a really strong pickmeup? This is your best option."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GIgQDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjMHww", 
+      "is_featured": true, 
+      "name": "Peppermint Herbal Tea", 
+      "created_at": "2009-08-01 15:39:29", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:17:33.200525", 
+      "price": 5.9900000000000002, 
+      "description": "This is some good tea. Good for easing stomach pain and sore throats on cold winter days. Price is for a package containing 30 teabags."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GI4QDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjNHww", 
+      "is_featured": false, 
+      "name": "Breakfast Blend", 
+      "created_at": "2009-08-02 04:37:52.052640", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:17:44.581817", 
+      "price": 12.949999999999999, 
+      "description": "Breakfast Blend is smooth and delicious blend of Arabica beans grown in Central and South America. With a bold yet smooth taste this blend will help you start your morning out right. Available in Regular or Decaf."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GJMQDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjOHww", 
+      "is_featured": false, 
+      "name": "Glass Teapot with Infuser ", 
+      "created_at": "2009-08-02 04:56:58.743740", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:17:59.960602", 
+      "price": 24.949999999999999, 
+      "description": "The ideal type of teapot for brewing flowering teas, this glass teapot is beautiful and functional. Made of the finest heat-resistant glass, this teapot is highly durable. The large glass infuser allows your tea to swirl freely for maximum flavor as you watch the flowering teas unfold. Holds 16.5 oz.\r\n\r\n"
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GJcQDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjPHww", 
+      "is_featured": true, 
+      "name": "Jittery Jitters Espresso Machine", 
+      "created_at": "2009-08-02 19:42:00.098417", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:18:10.629733", 
+      "price": 299.99000000000001, 
+      "description": "This one makes 'em strong! Comes in only one color: black. The way coffee was meant to be consumed."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GLMfDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjMHww", 
+      "is_featured": true, 
+      "name": "Yerba Matte Herbal Tea", 
+      "created_at": "2009-08-02 03:46:41.378030", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:18:29.559590", 
+      "price": 6.9900000000000002, 
+      "description": "Our Yerba Matte is strong stuff. Just the caffeine boost you need before dragging yourself in to work in the morning."
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GLcfDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjNHww", 
+      "is_featured": false, 
+      "name": "Hazelnut Coffee", 
+      "created_at": "2009-08-02 04:44:03.635310", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:18:43.333319", 
+      "price": 13.949999999999999, 
+      "description": "Subtle flavor of hazelnuts blended with ground coffee. This blend is a lighter roasted coffee. With the buttery and sweet flavor of warm roasted hazelnuts this is a great change of pace from your regular blend. (price per pound)"
+    }
+  }, 
+  {
+    "pk": "ahBkamFuZ28tZWNvbW1lcmNlchQLEg1zdG9yZV9wcm9kdWN0GLkfDA", 
+    "model": "store.product", 
+    "fields": {
+      "category": "ahBkamFuZ28tZWNvbW1lcmNlchULEg5zdG9yZV9jYXRlZ29yeRjOHww", 
+      "is_featured": false, 
+      "name": "Small Round Teapot 18oz", 
+      "created_at": "2009-08-02 04:51:23.346288", 
+      "is_active": true, 
+      "updated_at": "2009-08-03 07:18:55.434220", 
+      "price": 9.9900000000000002, 
+      "description": "Our most popular teapot!  These teapots are nicely glazed inside and out. They are dishwasher and microwave safe. Available in a wide variety of colors.\r\n"
+    }
+  }
+]
